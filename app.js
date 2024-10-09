@@ -24,23 +24,26 @@ app.listen(port, () => {
 
 
 
-
-
-
 // import './App.css';
+// import {useState} from 'react'
 
 // function App() {
+//   const [prevVal, setVal] = useState("")
+//   const [ans, setAns] = useState("")
 //   const myfunc = async () => {
 //     const response = await fetch('http://localhost:5000/api/Search',  {
 //       method: "POST",
 //       headers:{
 //         "Content-Type": "application/json"
 //       },
-//       body: JSON.stringify({name: "singh"})
+//       body: JSON.stringify({name: prevVal})
 //     })
 //     const json = await response.json();
 //     console.log(json)
-//     console.log("Func called")
+//     setAns(json)
+//   }
+//   const valFetch = (e) => {
+//     setVal(e.target.value)
 //   }
 //   return (
 //    <>
@@ -48,8 +51,9 @@ app.listen(port, () => {
 //         <br/><br/>
 //         <h2>🙂 Welcome to GEM - INI 🙂</h2>
 //         <div className="quesSide">
-//           <label>Enter Question: </label><input type="text" /><br/>
-//           <input type='Submit' placeholder='Submit' onClick={() => myfunc()}/>
+//           <label>Enter Question:<br/> </label><textarea placeholder='Hello there!' cols={50} rows={3} type="text" onChange={valFetch} name="val" value={prevVal} style={{marginRight:"20px"}}/>
+//           <input type='Submit' placeholder='Submit' onClick={() => myfunc()}/><br/><br/>
+//           <textarea cols={50} rows={10} name="ans" value={ans.message}/>
 //         </div>
 //       </div>
 //    </>
